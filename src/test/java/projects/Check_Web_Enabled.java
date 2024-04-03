@@ -22,9 +22,22 @@ public class Check_Web_Enabled {
 
 		try {
 			// Define an array of username-password pairs
-			String[][] credentials = { { "911317101", "Test@1234" }, 
-															{ "911317102", "Test@1234" },
-															{ "911317103", "Test@1234" }
+			String[][] credentials = { {"911317101","Test@1234"},  //AFRCHX
+					{"911317102","Test@1234"},  //AFROPX
+					{"911317103","Test@1234"},  //AFNMFX
+					{"911317104","Test@1234"},  //AFNFLX
+					{"911317105","Test@1234"},  //APNMFX
+					{"911317106","Test@1234"},  //APNFLX
+					{"911317107","Test@1234"},  //APRCHX
+					{"911317108","Test@1234"},  //APROPX
+					{"911317109","Test@1234"},  //ATNMFX
+					{"911317110","Test@1234"},  //ATRFLX
+					{"911317111","Test@1234"},  //ATRCHX
+					{"911317112","Test@1234"},  //ATROPX
+					{"911317113","Test@1234"},  //LFNMFX
+					{"911317114","Test@1234"},  //LFNFLX
+					{"911317115","Test@1234"},  //LFRCHX
+					{"911317116","Test@1234"}  //LFROPX
 					// Add more username-password pairs as needed
 			};
 
@@ -53,7 +66,7 @@ public class Check_Web_Enabled {
 
 				// Click on Site Again Link Command
 				driver.findElement(By.cssSelector("a[href='/countyofla']")).click();
-				System.out.println("User " +"("+ username +")"+ " is successfully Logged Out!!!");
+				System.out.println("This User" +"("+ username +")"+ " is Web Enabled!!!");
 
 			}
 
