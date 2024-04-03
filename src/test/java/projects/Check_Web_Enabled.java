@@ -22,10 +22,9 @@ public class Check_Web_Enabled {
 
 		try {
 			// Define an array of username-password pairs
-			String[][] credentials = { 
-					{ "911317004", "Test@1234" },
-					{ "911317005", "Test@1234" },
-					{ "911317006", "Test@1234" }
+			String[][] credentials = { { "911317101", "Test@1234" }, 
+															{ "911317102", "Test@1234" },
+															{ "911317103", "Test@1234" }
 					// Add more username-password pairs as needed
 			};
 
@@ -35,7 +34,7 @@ public class Check_Web_Enabled {
 				String password = credential[1];
 
 				// Below Command to put the URL:
-				driver.get("https://qa6.lifeatworkportal.com/countyofla");
+				driver.get("https://pp.lifeatworkportal.com/countyofla");
 				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
 				// Log In Page Command
@@ -54,7 +53,7 @@ public class Check_Web_Enabled {
 
 				// Click on Site Again Link Command
 				driver.findElement(By.cssSelector("a[href='/countyofla']")).click();
-				System.out.println("User is successfully Logged Out!!!");
+				System.out.println("User " +"("+ username +")"+ " is successfully Logged Out!!!");
 
 			}
 
