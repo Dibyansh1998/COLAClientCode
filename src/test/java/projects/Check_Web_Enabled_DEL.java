@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Check_Web_Enabled {
+public class Check_Web_Enabled_DEL {
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -23,7 +23,7 @@ public class Check_Web_Enabled {
 		try {
 			// Define an array of username-password pairs
 			String[][] credentials = { {"911376381","Test@1234"},  //AFRCHX
-//					{"911317102","Test@1234"},  //AFROPX
+					{"911317102","Test@1234"},  //AFROPX
 //					{"911317103","Test@1234"},  //AFNMFX
 //					{"911317104","Test@1234"},  //AFNFLX
 //					{"911317105","Test@1234"},  //APNMFX
@@ -47,7 +47,7 @@ public class Check_Web_Enabled {
 				String password = credential[1];
 
 				// Below Command to put the URL:
-				driver.get("https://pp.lifeatworkportal.com/countyofla");
+				driver.get("https://pp.lifeatworkportal.com/deloitte");
 				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
 				// Log In Page Command
@@ -62,10 +62,10 @@ public class Check_Web_Enabled {
 				driver.findElement(By.id("ContinueBtn")).click();
 
 				// Authorization Page Command
-				driver.findElement(By.id("CancelBtn")).click();
+				driver.findElement(By.xpath("//button[@id='CancelBtn']")).click();
 
 				// Click on Site Again Link Command
-				driver.findElement(By.cssSelector("a[href='/countyofla']")).click();
+				driver.findElement(By.xpath("//a[normalize-space()='site again']")).click();
 				System.out.println("This User" +"("+ username +")"+ " is Web Enabled!!!");
 
 			}
