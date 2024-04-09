@@ -1,6 +1,14 @@
 package projects;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Calendar;
+import java.util.UUID;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,31 +21,39 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Check_Web_Enabled {
 
-	public static void main(String[] args) throws InterruptedException {
+	static String output;
+
+	public static void main(String[] args) throws InterruptedException, FileNotFoundException {
 
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 
+		// Get the current time stamp
+		long currentTimeMillis = System.currentTimeMillis();
+
+		String timestamp = String.valueOf(currentTimeMillis);
+		String time = timestamp.replace(":", "").replace(" ", "_");
+
+		// Define the file path where you want to store the console output
+		String filePath = "C:\\Users\\52304535\\OneDrive - Conduent\\Console Output\\console_output_" + time + ".txt";
+
+		// Redirect System.out to the file
+		try {
+			File file = new File(filePath);
+			FileOutputStream fos = new FileOutputStream(file);
+			PrintStream ps = new PrintStream(fos);
+			System.setOut(ps);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+
 		try {
 			// Define an array of username-password pairs
-			String[][] credentials = { {"911376381","Test@1234"},  //AFRCHX
-//					{"911317102","Test@1234"},  //AFROPX
-//					{"911317103","Test@1234"},  //AFNMFX
-//					{"911317104","Test@1234"},  //AFNFLX
-//					{"911317105","Test@1234"},  //APNMFX
-//					{"911317106","Test@1234"},  //APNFLX
-//					{"911317107","Test@1234"},  //APRCHX
-//					{"911317108","Test@1234"},  //APROPX
-//					{"911317109","Test@1234"},  //ATNMFX
-//					{"911317110","Test@1234"},  //ATRFLX
-//					{"911317111","Test@1234"},  //ATRCHX
-//					{"911317112","Test@1234"},  //ATROPX
-//					{"911317113","Test@1234"},  //LFNMFX
-//					{"911317114","Test@1234"},  //LFNFLX
-//					{"911317115","Test@1234"},  //LFRCHX
-//					{"911317116","Test@1234"}  //LFROPX
+			String[][] credentials = { { "911317101", "Test@1234" }, // AFRCHX
+					{ "911317102", "Test@1234" } // AFRCHX
+//					
 					// Add more username-password pairs as needed
 			};
 
@@ -66,14 +82,17 @@ public class Check_Web_Enabled {
 
 				// Click on Site Again Link Command
 				driver.findElement(By.cssSelector("a[href='/countyofla']")).click();
-				System.out.println("This User" +"("+ username +")"+ " is Web Enabled!!!");
+
+				System.out.println("" + username + " is Web Enabled!!!");
 
 			}
 
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 
-		} finally {
+		}
+
+		finally {
 
 			// Close the browser session
 			driver.quit();
