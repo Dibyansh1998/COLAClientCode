@@ -37,7 +37,7 @@ public class Check_Web_Enabled {
 		String time = timestamp.replace(":", "").replace(" ", "_");
 
 		// Define the file path where you want to store the console output
-		String filePath = "C:\\Users\\52304535\\OneDrive - Conduent\\Console Output\\console_output_" + time + ".txt";
+		String filePath = "C:\\Users\\dibya\\OneDrive\\Documents\\OneNote Notebooks\\Console Output\\console_output_" + time + ".txt";
 
 		// Redirect System.out to the file
 		try {
@@ -51,8 +51,8 @@ public class Check_Web_Enabled {
 
 		try {
 			// Define an array of username-password pairs
-			String[][] credentials = { { "911317101", "Test@1234" }, // AFRCHX
-					{ "911317102", "Test@1234" } // AFRCHX
+			String[][] credentials = { { "911317105", "Test@1234" }, // AFRCHX
+															{ "911317106", "Test@1234" } // AFRCHX
 //					
 					// Add more username-password pairs as needed
 			};
