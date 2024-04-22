@@ -22,51 +22,22 @@ public class Check_Web_Enabled_DEL {
 
 		try {
 			// Define an array of username-password pairs
-			String[][] credentials = { 
-//					{"911320046","Test@1234"},  //911320046:AFRCHX
-//					{"911320047","Test@1234"},  //911320047:AFROPX
-//					{"911320048","Test@1234"},  //911320048:AFNMFX
-//					{"911320049","Test@1234"},  //911320049:AFNFLX
-//					{"911320050","Test@1234"},  //911320050:APNMFX
-//					{"911320051","Test@1234"},  //911320051:APNFLX
-//					{"911320052","Test@1234"},  //911320052:APRCHX
-//					{"911320053","Test@1234"},  //911320053:APROPX
-//					{"911320054","Test@1234"},  //911320054:ATNMFX
-////					{"911320055","Test@1234"},  //911320055:ATRFLX
-//					{"911320056","Test@1234"},  //911320056:ATRCHX
-//					{"911320057","Test@1234"},  //911320057:ATROPX
-//					{"911320058","Test@1234"},  //911320058:LFNMFX
-//					{"911320059","Test@1234"},  //911320059:LFNFLX
-//					{"911320060","Test@1234"},  //911320060:LFRCHX
-////					{"911320061","Test@1234"},  //911320061:LFROPX
-//					{"911320062","Test@1234"},  //911320062:LFROPX
-//					{"911320063","Test@1234"},  //911320063:LFROPX
-//					{"911320064","Test@1234"},  //911320064:LFROPX
-//					{"911320065","Test@1234"},  //911320065:LFROPX
-//					{"911320066","Test@1234"},  //911320066:LFROPX
-//					{"911320067","Test@1234"},  //911320067:LFROPX
-//					{"911320068","Test@1234"},  //911320068:LFROPX
-//					{"911320069","Test@1234"},  //911320069:LFROPX
-//					{"911320070","Test@1234"},  //911320070:LFROPX
-//					{"911320071","Test@1234"},  //911320071:LFROPX
-////					{"911320072","Test@1234"},  //911320072:LFROPX
-//					{"911320073","Test@1234"},  //911320073:LFROPX
-//					{"911320074","Test@1234"},  //911320074:LFROPX
-//					{"911320075","Test@1234"},  //911320075:LFROPX
-//					{"911320076","Test@1234"},  //911320076:LFROPX
-//					{"911320077","Test@1234"},  //911320077:LFROPX
-//					{"911320078","Test@1234"},  //911320078:LFROPX
-//					{"911320079","Test@1234"},  //911320079:LFROPX
-//					{"911320080","Test@1234"},  //911320080:LFROPX
-//					{"911320081","Test@1234"},  //911320081:LFROPX
-//					{"911320082","Test@1234"},  //911320082:LFROPX
-//					{"911320083","Test@1234"},  //911320083:LFROPX
-//					{"911320084","Test@1234"},  //911320084:LFROPX
-//					{"911320085","Test@1234"},  //911320085:LFROPX
-//					{"911320086","Test@1234"},  //911320086:LFROPX
-					{"911320087","Test@1234"},  //911320087:LFROPX
-
-
+			String[][] credentials = {
+					{"911317301","Test@1234"},  //911317301:AFNMFX
+					{"911317302","Test@1234"},  //911317302:AFNMFX
+					{"911317303","Test@1234"},  //911317303:AFNMFX
+					{"911317304","Test@1234"},  //911317304:AFNMFX
+					{"911317305","Test@1234"},  //911317305:AFNMFX
+					{"911317306","Test@1234"},  //911317306:AFNMFX
+					{"911317307","Test@1234"},  //911317307:AFNMFX
+					{"911317308","Test@1234"},  //911317308:AFNMFX
+					{"911317309","Test@1234"},  //911317309:AFNMFX
+					{"911317310","Test@1234"},  //911317310:AFNMFX
+					{"911317311","Test@1234"},  //911317311:AFNMFX
+					{"911317312","Test@1234"},  //911317312:AFNMFX
+					{"911317313","Test@1234"},  //911317313:AFNMFX
+					{"911317314","Test@1234"},  //911317314:AFNMFX
+					{"911317315","Test@1234"},  //911317315:AFNMFX
 
 					// Add more username-password pairs as needed
 			};
@@ -78,7 +49,8 @@ public class Check_Web_Enabled_DEL {
 
 				// Below Command to put the URL:
 				driver.get("https://pp.lifeatworkportal.com/deloitte");
-				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+				// Use Duration.ofSeconds() instead of Duration.seconds()
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 				// Log In Page Command
 				// Find the UserName and password input fields and enter credentials
@@ -94,15 +66,14 @@ public class Check_Web_Enabled_DEL {
 				Thread.sleep(2000);
 				// Authorization Page Command
 				driver.findElement(By.cssSelector("#CancelBtn")).click();
-				System.out.println("This User" +"("+ username +")"+ " is Web Enabled!!!");
+				System.out.println("This User" + "(" + username + ")" + " is Web Enabled!!!");
 //				driver.findElement(By.id("ContinueBtn")).click();
 //				driver.findElement(By.xpath("//button[@id='CancelBtn']")).click();
 
 				// Click on Site Again Link Command
 				driver.findElement(By.cssSelector("a[href='/deloitte']")).click();
-				
+
 //				driver.findElement(By.xpath("//a[normalize-space()='site again']")).click();
-				
 
 			}
 
