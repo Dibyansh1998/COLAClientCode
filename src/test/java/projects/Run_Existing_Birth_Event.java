@@ -30,7 +30,7 @@ public class Run_Existing_Birth_Event {
 		LifeEventExecution();
 		ClickMakeElectionButton();
 		DependentScreenData();
-		Tire_Down();
+//		Tire_Down();
 
 	}
 
@@ -42,8 +42,8 @@ public class Run_Existing_Birth_Event {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		// Below Command to put the URL:
-		driver.get("https://pp.lifeatworkportal.com/countyofla");
-		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		driver.get("https://www6.lifeatworkportal.com/countyofla");
+		wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
 	}
 
@@ -53,8 +53,8 @@ public class Run_Existing_Birth_Event {
 	public static void LogIn_Page() throws InterruptedException {
 
 		// Log in page Commands:
-		driver.findElement(By.id("USERNAME")).sendKeys("911317101");
-		driver.findElement(By.id("password")).sendKeys("Test@1234");
+		driver.findElement(By.id("USERNAME")).sendKeys("911317008");
+		driver.findElement(By.id("password")).sendKeys("Ishu@1998");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("showhide")));
 		driver.findElement(By.id("showhide")).click();
 		Thread.sleep(2000);
@@ -85,7 +85,7 @@ public class Run_Existing_Birth_Event {
 	// This below code will be allowed Cookies Pop-up and Click on Life Event Tab
 	@Test
 	public static void LifeEventExecution() throws InterruptedException {
-		Thread.sleep(1500);
+		Thread.sleep(5000);
 		wait.until(
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Accept Cookies']")))
 				.click();
@@ -103,7 +103,7 @@ public class Run_Existing_Birth_Event {
 				.click();
 		Thread.sleep(14000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollTo(0,700)", "");
+		js.executeScript("window.scrollTo(0,600)", "");
 		Thread.sleep(3000);
 		js.executeScript("window.scrollTo(0,200)", "");
 		//Below line of code will click on Change button of Medical Benefit
@@ -157,6 +157,14 @@ public class Run_Existing_Birth_Event {
 		// Click on the Save button on Dependent Screen
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[@name='leMakeElections_AddUpdateDependentFamilyMember']")).click();
+		Thread.sleep(2000);
+		JavascriptExecutor js2=(JavascriptExecutor)driver;
+		js2.executeScript("window.scrollTo(0,900)","");
+		Thread.sleep(2000);
+		driver.findElement(By.cssSelector("span[class='depName ng-scope'] input[class='familyMembersChck']")).click();
+		js2.executeScript("window.scrollTo(0,1100)","");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//button[@name='leElectionTableAContinue']")).click();
 	}
 
 	// This code would be Close the Browser
