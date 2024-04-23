@@ -5,11 +5,9 @@
     <classes>
       <class name="projects.Birth_Event">
         <methods>
-          <include name="Authorization_Page"/>
           <include name="Tire_Down"/>
           <include name="Accept_Cookies"/>
           <include name="Launch_COLA_Site"/>
-          <include name="LogIn_Page"/>
         </methods>
       </class> <!-- projects.Birth_Event -->
     </classes>
