@@ -32,9 +32,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Program Files/Java/jdk-22/lib/jrt-fs.jar"/>
-	<classpathentry kind="lib" path="C:/Users/52304535/Downloads/junit-4.13.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/52304535/Downloads/selenium-server-3.141.59.jar"/>
-	<classpathentry kind="lib" path="C:/Users/52304535/Downloads/selenium-java-4.19.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/52304535/Downloads/webdrivermanager-5.8.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

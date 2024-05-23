@@ -1,14 +1,7 @@
 package projects;
 
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.PrintStream;
-import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.Calendar;
-import java.util.UUID;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -51,23 +44,23 @@ public class Check_Web_Enabled_COLA {
 
 		try {
 			// Define an array of username-password pairs
-			String[][] credentials = { 
-					
-					{"911317101","Test@1234"},  //911317101:AFNMFX
-					{"911317102","Test@1234"},  //911317102:AFNMFX
-					{"911317103","Test@1234"},  //911317103:AFNMFX
-					{"911317104","Test@1234"},  //911317104:AFNMFX
-					{"911317105","Test@1234"},  //911317105:AFNMFX
-					{"911317106","Test@1234"},  //911317106:AFNMFX
-					{"911317107","Test@1234"},  //911317107:AFNMFX
-					{"911317108","Test@1234"},  //911317108:AFNMFX
-					{"911317109","Test@1234"},  //911317109:AFNMFX
-					{"911317110","Test@1234"},  //911317110:AFNMFX
-					{"911317111","Test@1234"},  //911317111:AFNMFX
-					{"911317112","Test@1234"},  //911317112:AFNMFX
-					{"911317113","Test@1234"},  //911317113:AFNMFX
-					{"911317114","Test@1234"},  //911317114:AFNMFX
-					{"911317115","Test@1234"},  //911317115:AFNMFX
+			String[][] credentials = {
+
+					{ "911317101", "Test@1234" }, // 911317101:AFNMFX
+					{ "911317102", "Test@1234" }, // 911317102:AFNMFX
+					{ "911317103", "Test@1234" }, // 911317103:AFNMFX
+					{ "911317104", "Test@1234" }, // 911317104:AFNMFX
+					{ "911317105", "Test@1234" }, // 911317105:AFNMFX
+					{ "911317106", "Test@1234" }, // 911317106:AFNMFX
+					{ "911317107", "Test@1234" }, // 911317107:AFNMFX
+					{ "911317108", "Test@1234" }, // 911317108:AFNMFX
+					{ "911317109", "Test@1234" }, // 911317109:AFNMFX
+					{ "911317110", "Test@1234" }, // 911317110:AFNMFX
+					{ "911317111", "Test@1234" }, // 911317111:AFNMFX
+					{ "911317112", "Test@1234" }, // 911317112:AFNMFX
+					{ "911317113", "Test@1234" }, // 911317113:AFNMFX
+					{ "911317114", "Test@1234" }, // 911317114:AFNMFX
+					{ "911317115", "Test@1234" }, // 911317115:AFNMFX
 //					
 					// Add more username-password pairs as needed
 			};
