@@ -23,21 +23,54 @@ public class Check_Web_Enabled_DEL {
 		try {
 			// Define an array of username-password pairs
 			String[][] credentials = {
-					{"911317301","Test@1234"},  //911317301:AFNMFX
-					{"911317302","Test@1234"},  //911317302:AFNMFX
-					{"911317303","Test@1234"},  //911317303:AFNMFX
-					{"911317304","Test@1234"},  //911317304:AFNMFX
-					{"911317305","Test@1234"},  //911317305:AFNMFX
-					{"911317306","Test@1234"},  //911317306:AFNMFX
-					{"911317307","Test@1234"},  //911317307:AFNMFX
-					{"911317308","Test@1234"},  //911317308:AFNMFX
-					{"911317309","Test@1234"},  //911317309:AFNMFX
-					{"911317310","Test@1234"},  //911317310:AFNMFX
-					{"911317311","Test@1234"},  //911317311:AFNMFX
-					{"911317312","Test@1234"},  //911317312:AFNMFX
-					{"911317313","Test@1234"},  //911317313:AFNMFX
-					{"911317314","Test@1234"},  //911317314:AFNMFX
-					{"911317315","Test@1234"},  //911317315:AFNMFX
+//					{"911378401","Test@1234"},  //911378401:AFNMFX
+//					{"911378402","Test@1234"},  //911378402:AFNMFX
+//					{"911378403","Test@1234"},  //911378403:AFNMFX
+//					{"911378404","Test@1234"},  //911378404:AFNMFX
+//					{"911378405","Test@1234"},  //911378405:AFNMFX
+//					{"911378406","Test@1234"},  //911378406:AFNMFX
+//					{"911378407","Test@1234"},  //911378407:AFNMFX
+//					{"911378408","Test@1234"},  //911378408:AFNMFX
+//					{"911378409","Test@1234"},  //911378409:AFNMFX
+//					{"911378410","Test@1234"},  //911378410:AFNMFX
+//					{"911378411","Test@1234"},  //911378411:AFNMFX
+//					{"911378412","Test@1234"},  //911378412:AFNMFX
+//					{"911378413","Test@1234"},  //911378413:AFNMFX
+//					{"911378414","Test@1234"},  //911378414:AFNMFX
+//					{"911378415","Test@1234"},  //911378415:AFNMFX
+//					{"911378416","Test@1234"},  //911378416:LFROPX
+//					{"911378417","Test@1234"},  //911378417:LFROPX
+//					{"911378418","Test@1234"},  //911378418:LFROPX
+//					{"911378419","Test@1234"},  //911378419:LFROPX
+//					{"911378420","Test@1234"},  //911378420:LFROPX
+//					{"911378421","Test@1234"},  //911378421:LFROPX - Not Web Enabled
+//					{"911378422","Test@1234"},  //911378422:LFROPX
+//					{"911378423","Test@1234"},  //911378423:LFROPX
+//					{"911378424","Test@1234"},  //911378424:LFROPX
+//					{"911378425","Test@1234"},  //911378425:LFROPX
+//					{"911378426","Test@1234"},  //911378426:LFROPX
+//					{"911378427","Test@1234"},  //911378427:LFROPX - Not Web Enabled
+//					{"911378428","Test@1234"},  //911378428:LFROPX
+//					{"911378429","Test@1234"},  //911378429:LFROPX
+//					{"911378430","Test@1234"},  //911378430:LFROPX
+//					{"911378431","Test@1234"},  //911378431:LFROPX
+//					{"911378432","Test@1234"},  //911378432:LFROPX
+//					{"911378433","Test@1234"},  //911378433:LFROPX
+//					{"911378434","Test@1234"},  //911378434:LFROPX
+//					{"911378435","Test@1234"},  //911378435:LFROPX
+//					{"911378436","Test@1234"},  //911378436:LFROPX
+//					{"911378437","Test@1234"},  //911378437:LFROPX
+//					{"911378438","Test@1234"},  //911378438:LFROPX
+//					{"911378439","Test@1234"},  //911378439:LFROPX
+//					{"911378440","Test@1234"},  //911378440:LFROPX
+//					{"911378441","Test@1234"},  //911378441:LFROPX
+//					{"911378442","Test@1234"},  //911378442:LFROPX
+//					{"911378443","Test@1234"},  //911378443:ASPPGN
+//					{"911378444","Test@1234"},  //911378444:ASPPGN
+//					{"911378445","Test@1234"},  //911378445:ASPPGN
+//					{"911378446","Test@1234"},  //911378446:ASPPGN
+//					{"911378447","Test@1234"},  //911378447:ASPPGN
+//					{"911378448","Test@1234"},  //911378448:ASPPGN
 
 					// Add more username-password pairs as needed
 			};
@@ -48,7 +81,7 @@ public class Check_Web_Enabled_DEL {
 				String password = credential[1];
 
 				// Below Command to put the URL:
-				driver.get("https://pp.lifeatworkportal.com/deloitte");
+				driver.get("https://qa6.lifeatworkportal.com/deloitte");
 				// Use Duration.ofSeconds() instead of Duration.seconds()
 				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
