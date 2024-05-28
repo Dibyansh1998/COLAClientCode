@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Random;
 
 import javax.imageio.ImageIO;
 
@@ -31,6 +30,7 @@ public class Electmaint_Make_Election {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 		// Calendar
 
@@ -38,17 +38,13 @@ public class Electmaint_Make_Election {
 		Date time = cal.getTime();
 		String timestamp = time.toString().replace(":", "_").replace(" ", "_");
 
-        Random random = new Random();
-        
-        // Generate a random integer
-        int randomNumber = random.nextInt();
-		
-		String[][] credentials = { { "911378401", "Test@1234" }, // 911378401:ASEMGN
+		String[][] credentials = { 
+				{ "911378401", "Test@1234" }, // 911378401:ASEMGN
 				{ "911378403", "Test@1234" }, // 911378403:ASEMCN
 				{ "911378407", "Test@1234" }, // 911378407:ASMDGN
 				{ "911378408", "Test@1234" }, // 911378408:ASPPGN
 				{ "911378422", "Test@1234" }, // 911378422:ASEMTN
-//            { "911378440", "Test@1234" }, // 911378440:ATEMGN
+				{ "911378440", "Test@1234" }, // 911378440:ATEMGN
 				{ "911378447", "Test@1234" }, // 911378447:ASEMON
 				{ "911378448", "Test@1234" }, // 911378448:ASEMWN
 		};
@@ -59,8 +55,8 @@ public class Electmaint_Make_Election {
 			String password = credential[1];
 
 			// Below Command to put the URL:
-			driver.get("https://qa6.lifeatworkportal.com/deloitte");
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(17));
+			driver.get("https://pp.lifeatworkportal.com/deloitte");
+			
 
 			// Log In Page Command
 			WebElement usernameInput = driver.findElement(By.id("USERNAME"));
@@ -105,8 +101,7 @@ public class Electmaint_Make_Election {
 //			if (!folder.exists()) {
 //				folder.mkdirs(); // Create folder and parent directories if necessary
 //			}
-			
-			
+
 			// Take ScreenShot Command
 			WebElement ele = wait.until(ExpectedConditions
 					.visibilityOfElementLocated(By.xpath("//div[@class='row makeElectionPageRow ng-scope']")));
@@ -118,7 +113,9 @@ public class Electmaint_Make_Election {
 					.shootingStrategy(ShootingStrategies.viewportPasting(100)).takeScreenshot(driver, ele);
 
 			// Specify the destination where the screenshot will be saved
-			File destination = new File( "C:\\Users\\52304535\\OneDrive - Conduent\\Documents\\OneNote Notebooks\\Screenshots\\snagits_" + timestamp +"_"+username+ ".png");
+			File destination = new File(
+					"C:\\Users\\52304535\\OneDrive - Conduent\\Documents\\OneNote Notebooks\\Screenshots\\snagits_"
+							+ timestamp + "_" + username + ".png");
 
 			// Save the screenshot to the specified file
 			ImageIO.write(screenshot.getImage(), "PNG", destination);
