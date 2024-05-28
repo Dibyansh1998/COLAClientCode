@@ -78,10 +78,11 @@ public class Take_Screenshots {
 				.shootingStrategy(ShootingStrategies.viewportPasting(100)).takeScreenshot(driver, ele);
 
 		// Specify the destination where the screenshot will be saved
-		File destination = new File( "C:\\Users\\52304535\\OneDrive - Conduent\\Documents\\OneNote Notebooks\\Screenshots\\snagits_" + timestamp +".png");
+		File destination = new File( "C:\\Users\\52304535\\OneDrive - Conduent\\Documents"
+				+ "\\OneNote Notebooks\\Screenshots\\snagits_" + timestamp +".png");
 
 		// Save the screenshot to the specified file
-		ImageIO.write(screenshot.getImage(), "PNG", destination);
+		ImageIO.write(screenshot.getImage(), "PDF", destination);
 
 		Thread.sleep(2000);
 		System.out.println("Screenshot saved at: " + destination.getAbsolutePath());
