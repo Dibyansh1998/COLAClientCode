@@ -2,15 +2,15 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-03T15:26:26 IST" name="Suite" finished-at="2024-06-03T15:26:48 IST" duration-ms="22154">
+  <suite started-at="2024-06-03T15:59:30 IST" name="Suite" finished-at="2024-06-03T15:59:52 IST" duration-ms="22796">
     <groups>
       <group name="Smoke">
-        <method signature="Check_Web_Enabled_DEL.webenabledcheck()[pri:0, instance:projects.Check_Web_Enabled_DEL@a1153bc]" name="webenabledcheck" class="projects.Check_Web_Enabled_DEL"/>
+        <method signature="Check_Web_Enabled_DEL.webenabledcheck()[pri:0, instance:projects.Check_Web_Enabled_DEL@7cc0cdad]" name="webenabledcheck" class="projects.Check_Web_Enabled_DEL"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2024-06-03T15:26:26 IST" name="Test" finished-at="2024-06-03T15:26:48 IST" duration-ms="22154">
+    <test started-at="2024-06-03T15:59:30 IST" name="Test" finished-at="2024-06-03T15:59:52 IST" duration-ms="22796">
       <class name="projects.Check_Web_Enabled_DEL">
-        <test-method signature="webenabledcheck()[pri:0, instance:projects.Check_Web_Enabled_DEL@a1153bc]" started-at="2024-06-03T15:26:26 IST" name="webenabledcheck" finished-at="2024-06-03T15:26:48 IST" duration-ms="22091" status="PASS">
+        <test-method signature="webenabledcheck()[pri:0, instance:projects.Check_Web_Enabled_DEL@7cc0cdad]" started-at="2024-06-03T15:59:30 IST" name="webenabledcheck" finished-at="2024-06-03T15:59:52 IST" duration-ms="22736" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- webenabledcheck -->

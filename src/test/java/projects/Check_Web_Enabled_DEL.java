@@ -13,9 +13,10 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Check_Web_Enabled_DEL {
-
+	
+	
 	@Test(groups="Smoke")
-	public void webenabledcheck()
+	public static void webenabledcheck()
 	{
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
