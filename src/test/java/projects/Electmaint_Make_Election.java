@@ -39,12 +39,12 @@ public class Electmaint_Make_Election {
 		String timestamp = time.toString().replace(":", "_").replace(" ", "_");
 
 		String[][] credentials = { 
-				{ "911378401", "Test@1234" }, // 911378401:ASEMGN
-				{ "911378403", "Test@1234" }, // 911378403:ASEMCN
-				{ "911378407", "Test@1234" }, // 911378407:ASMDGN
-				{ "911378408", "Test@1234" }, // 911378408:ASPPGN
-				{ "911378422", "Test@1234" }, // 911378422:ASEMTN
-				{ "911378440", "Test@1234" }, // 911378440:ATEMGN
+//				{ "911378401", "Test@1234" }, // 911378401:ASEMGN
+//				{ "911378403", "Test@1234" }, // 911378403:ASEMCN
+//				{ "911378407", "Test@1234" }, // 911378407:ASMDGN
+//				{ "911378408", "Test@1234" }, // 911378408:ASPPGN
+//				{ "911378422", "Test@1234" }, // 911378422:ASEMTN
+//				{ "911378440", "Test@1234" }, // 911378440:ATEMGN
 				{ "911378447", "Test@1234" }, // 911378447:ASEMON
 				{ "911378448", "Test@1234" }, // 911378448:ASEMWN
 		};
@@ -55,7 +55,7 @@ public class Electmaint_Make_Election {
 			String password = credential[1];
 
 			// Below Command to put the URL:
-			driver.get("https://pp.lifeatworkportal.com/deloitte");
+			driver.get("https://qa6.lifeatworkportal.com/deloitte");
 			
 
 			// Log In Page Command
@@ -112,12 +112,13 @@ public class Electmaint_Make_Election {
 			Screenshot screenshot = new AShot().coordsProvider(new WebDriverCoordsProvider())
 					.shootingStrategy(ShootingStrategies.viewportPasting(100)).takeScreenshot(driver, ele);
 
+			Thread.sleep(1000);
 			// Specify the destination where the screenshot will be saved
-			File destination = new File(
-					"C:\\Users\\52304535\\OneDrive - Conduent\\Documents\\OneNote Notebooks\\Screenshots\\snagits_"
-							+ timestamp + "_" + username + ".png");
+			
+			File destination = new File(System.getProperty("user.dir")+"ScreenShots\\snagit_"+ timestamp+"_"+ username +".png");
 
 			// Save the screenshot to the specified file
+			Thread.sleep(1000);
 			ImageIO.write(screenshot.getImage(), "PNG", destination);
 
 			Thread.sleep(2000);
