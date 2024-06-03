@@ -8,13 +8,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Check_Web_Enabled_DEL {
 
-	public static void main(String[] args) throws InterruptedException {
-
+	@Test(groups="Smoke")
+	public void webenabledcheck()
+	{
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -24,54 +26,23 @@ public class Check_Web_Enabled_DEL {
 		try {
 			// Define an array of username-password pairs
 			String[][] credentials = {
-//					{ "911378401", "Test@1234" }, // 911378401:AFNMFX
-//					{ "911378402", "Test@1234" }, // 911378402:AFNMFX
-//					{ "911378403", "Test@1234" }, // 911378403:AFNMFX
-//					{ "911378404", "Test@1234" }, // 911378404:AFNMFX
-//					{ "911378405", "Test@1234" }, // 911378405:AFNMFX
-//					{ "911378406", "Test@1234" }, // 911378406:AFNMFX
-//					{ "911378407", "Test@1234" }, // 911378407:AFNMFX
-//					{ "911378408", "Test@1234" }, // 911378408:AFNMFX
-//					{ "911378409", "Test@1234" }, // 911378409:AFNMFX
-//					{ "911378410", "Test@1234" }, // 911378410:AFNMFX
-//					{ "911378411", "Test@1234" }, // 911378411:AFNMFX
-//					{ "911378412", "Test@1234" }, // 911378412:AFNMFX
-//					{ "911378413", "Test@1234" }, // 911378413:AFNMFX
-//					{ "911378414", "Test@1234" }, // 911378414:AFNMFX
-//					{ "911378415", "Test@1234" }, // 911378415:AFNMFX
-//					{ "911378416", "Test@1234" }, // 911378416:LFROPX
-//					{ "911378417", "Test@1234" }, // 911378417:LFROPX
-//					{ "911378418", "Test@1234" }, // 911378418:LFROPX
-//					{ "911378419", "Test@1234" }, // 911378419:LFROPX
-//					{ "911378420", "Test@1234" }, // 911378420:LFROPX
-//					{ "911378421", "Test@1234" }, // 911378421:LFROPX - Not Web Enabled
-//					{ "911378422", "Test@1234" }, // 911378422:LFROPX
-//					{ "911378423", "Test@1234" }, // 911378423:LFROPX
-//					{ "911378424", "Test@1234" }, // 911378424:LFROPX
-//					{ "911378425", "Test@1234" }, // 911378425:LFROPX
-//					{ "911378426", "Test@1234" }, // 911378426:LFROPX
-//					{ "911378427", "Test@1234" }, // 911378427:LFROPX - Not Web Enabled
-//					{ "911378428", "Test@1234" }, // 911378428:LFROPX
-//					{ "911378429", "Test@1234" }, // 911378429:LFROPX
-//					{ "911378430", "Test@1234" }, // 911378430:LFROPX
-//					{ "911378431", "Test@1234" }, // 911378431:LFROPX
-//					{ "911378432", "Test@1234" }, // 911378432:LFROPX
-//					{ "911378433", "Test@1234" }, // 911378433:LFROPX
-//					{ "911378434", "Test@1234" }, // 911378434:LFROPX
-//					{ "911378435", "Test@1234" }, // 911378435:LFROPX
-//					{ "911378436", "Test@1234" }, // 911378436:LFROPX
-//					{ "911378437", "Test@1234" }, // 911378437:LFROPX
-//					{ "911378438", "Test@1234" }, // 911378438:LFROPX
-//					{ "911378439", "Test@1234" }, // 911378439:LFROPX
-//					{ "911378440", "Test@1234" }, // 911378440:LFROPX
-//					{ "911378441", "Test@1234" }, // 911378441:LFROPX
-//					{ "911378442", "Test@1234" }, // 911378442:LFROPX
-//					{ "911378443", "Test@1234" }, // 911378443:ASPPGN - Not Web Enabled
-//					{ "911378444", "Test@1234" }, // 911378444:ASPPGN
-					{ "911378445", "Test@1234" }, // 911378445:ASPPGN
-					{ "911378446", "Test@1234" }, // 911378446:ASPPGN
-					{ "911378447", "Test@1234" }, // 911378447:ASPPGN
-					{ "911378448", "Test@1234" }, // 911378448:ASPPGN
+
+					{"911316451","Test@1234"},  //911316451:ASEMGN
+					{"911316452","Test@1234"},  //911316452:TSEMGN
+//					{"911316453","Test@1234"},  //911316453:ASEMCN
+//					{"911316454","Test@1234"},  //911316454:TTEMGN
+//					{"911316455","Test@1234"},  //911316455:RSEMGN
+//					{"911316456","Test@1234"},  //911316456:TSEMCN
+//					{"911316457","Test@1234"},  //911316457:ASMDGN
+//					{"911316458","Test@1234"},  //911316458:ASPPGN
+//					{"911316459","Test@1234"},  //911316459:RSPPGN
+//					{"911316460","Test@1234"},  //911316460:TSEMGW
+//					{"911316461","Test@1234"},  //911316461:PSEMGN
+//					{"911316462","Test@1234"},  //911316462:RSMDGN
+//					{"911316463","Test@1234"},  //911316463:OSEMGN
+//					{"911316464","Test@1234"},  //911316464:CSEMGC
+//					{"911316465","Test@1234"},  //911316465:TSMDGN
+//					{"911316466","Test@1234"}  //911316466:TSPPGN
 
 					// Add more username-password pairs as needed
 			};
@@ -112,5 +83,5 @@ public class Check_Web_Enabled_DEL {
 		}
 
 	}
-
+	
 }

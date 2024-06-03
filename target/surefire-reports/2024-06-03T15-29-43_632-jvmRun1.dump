@@ -1,5 +1,5 @@
-# Created at 2024-02-20T00:12:04.431
-org.apache.maven.surefire.api.testset.TestSetFailedException: Suite file C:\Users\dibya\eclipse-workspace\Dibyansh_Project\testng.xml is not a valid file
+# Created at 2024-06-03T15:29:45.196
+org.apache.maven.surefire.api.testset.TestSetFailedException: Suite file C:\Users\52304535\git\COLAClientCode\test-output\purchase.xml is not a valid file
 	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.locateTestSets(TestNGXmlTestSuite.java:89)
 	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:112)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
