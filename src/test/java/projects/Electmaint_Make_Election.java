@@ -38,15 +38,25 @@ public class Electmaint_Make_Election {
 		Date time = cal.getTime();
 		String timestamp = time.toString().replace(":", "_").replace(" ", "_");
 
-		String[][] credentials = { 
-//				{ "911378401", "Test@1234" }, // 911378401:ASEMGN
-//				{ "911378403", "Test@1234" }, // 911378403:ASEMCN
-//				{ "911378407", "Test@1234" }, // 911378407:ASMDGN
-//				{ "911378408", "Test@1234" }, // 911378408:ASPPGN
-//				{ "911378422", "Test@1234" }, // 911378422:ASEMTN
-//				{ "911378440", "Test@1234" }, // 911378440:ATEMGN
-				{ "911378447", "Test@1234" }, // 911378447:ASEMON
-				{ "911378448", "Test@1234" }, // 911378448:ASEMWN
+		String[][] credentials = {
+
+				{ "911316451", "Test@1234" }, // 911316451:ASEMGN
+				{ "911316452", "Test@1234" }, // 911316452:TSEMGN
+				{ "911316453", "Test@1234" }, // 911316453:ASEMCN
+				{ "911316454", "Test@1234" }, // 911316454:TTEMGN
+				{ "911316455", "Test@1234" }, // 911316455:RSEMGN
+				{ "911316456", "Test@1234" }, // 911316456:TSEMCN
+				{ "911316457", "Test@1234" }, // 911316457:ASMDGN
+				{ "911316458", "Test@1234" }, // 911316458:ASPPGN
+				{ "911316459", "Test@1234" }, // 911316459:RSPPGN
+				{ "911316460", "Test@1234" }, // 911316460:TSEMGW
+				{ "911316461", "Test@1234" }, // 911316461:PSEMGN
+				{ "911316462", "Test@1234" }, // 911316462:RSMDGN
+				{ "911316463", "Test@1234" }, // 911316463:OSEMGN
+				{ "911316464", "Test@1234" }, // 911316464:CSEMGC
+				{ "911316465", "Test@1234" }, // 911316465:TSMDGN
+				{ "911316466", "Test@1234" }, // 911316466:TSPPGN
+
 		};
 
 		// Loop through credentials and perform logins
@@ -56,7 +66,6 @@ public class Electmaint_Make_Election {
 
 			// Below Command to put the URL:
 			driver.get("https://qa6.lifeatworkportal.com/deloitte");
-			
 
 			// Log In Page Command
 			WebElement usernameInput = driver.findElement(By.id("USERNAME"));
@@ -114,8 +123,9 @@ public class Electmaint_Make_Election {
 
 			Thread.sleep(1000);
 			// Specify the destination where the screenshot will be saved
-			
-			File destination = new File(System.getProperty("user.dir")+"ScreenShots\\snagit_"+ timestamp+"_"+ username +".png");
+
+			File destination = new File(
+					System.getProperty("user.dir") + "ScreenShots\\snagit_" + timestamp + "_" + username + ".png");
 
 			// Save the screenshot to the specified file
 			Thread.sleep(1000);
