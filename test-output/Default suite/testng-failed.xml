@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="projects.Birth_Event">
+      <class name="projects.Electmaint_Make_Election">
         <methods>
-          <include name="Tire_Down"/>
-          <include name="Accept_Cookies"/>
-          <include name="Launch_COLA_Site"/>
+          <include name="TakeMakeElectionScreenShot"/>
         </methods>
-      </class> <!-- projects.Birth_Event -->
+      </class> <!-- projects.Electmaint_Make_Election -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -41,22 +41,22 @@ public class Electmaint_Make_Election {
 
 		String[][] credentials = {
 
-				{ "911316451", "Test@1234" }, // 911316451:ASEMGN
-//				{ "911316452", "Test@1234" }, // 911316452:TSEMGN
-				{ "911316453", "Test@1234" }, // 911316453:ASEMCN
-//				{ "911316454", "Test@1234" }, // 911316454:TTEMGN
-//				{ "911316455", "Test@1234" }, // 911316455:RSEMGN
-//				{ "911316456", "Test@1234" }, // 911316456:TSEMCN
-//				{ "911316457", "Test@1234" }, // 911316457:ASMDGN
-//				{ "911316458", "Test@1234" }, // 911316458:ASPPGN
-//				{ "911316459", "Test@1234" }, // 911316459:RSPPGN
-//				{ "911316460", "Test@1234" }, // 911316460:TSEMGW
-//				{ "911316461", "Test@1234" }, // 911316461:PSEMGN
-//				{ "911316462", "Test@1234" }, // 911316462:RSMDGN
-//				{ "911316463", "Test@1234" }, // 911316463:OSEMGN
-//				{ "911316464", "Test@1234" }, // 911316464:CSEMGC
-//				{ "911316465", "Test@1234" }, // 911316465:TSMDGN
-//				{ "911316466", "Test@1234" }, // 911316466:TSPPGN
+//				{"911316451","Test@1234"},  //911316451:ASEMGN
+				{"911316452","Test@1234"},  //911316452:TSEMGN
+				{"911316453","Test@1234"},  //911316453:ASEMCN
+				{"911316454","Test@1234"},  //911316454:TTEMGN
+				{"911316455","Test@1234"},  //911316455:RSEMGN
+				{"911316456","Test@1234"},  //911316456:TSEMCN
+				{"911316457","Test@1234"},  //911316457:ASMDGN
+				{"911316458","Test@1234"},  //911316458:ASPPGN
+				{"911316459","Test@1234"},  //911316459:RSPPGN
+				{"911316460","Test@1234"},  //911316460:TSEMGW
+				{"911316461","Test@1234"},  //911316461:PSEMGN
+				{"911316462","Test@1234"},  //911316462:RSMDGN
+				{"911316463","Test@1234"},  //911316463:OSEMGN
+				{"911316464","Test@1234"},  //911316464:CSEMGC
+				{"911316465","Test@1234"},  //911316465:TSMDGN
+				{"911316466","Test@1234"},  //911316466:TSPPGN
 
 		};
 
@@ -117,7 +117,7 @@ public class Electmaint_Make_Election {
 			// Specify the destination where the screenshot will be saved
 
 			File destination = new 
-					File("C:\\Desktop Items\\Attachments\\snagits_" + timestamp + "_" + username + ".png");
+					File("C:\\Users\\52304535\\OneDrive - Conduent\\Desktop\\Attachments\\Screenshots\\snagits_" + timestamp + "_" + username + ".png");
 
 			// Save the screenshot to the specified file
 			Thread.sleep(1000);
