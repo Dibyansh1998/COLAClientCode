@@ -66,7 +66,6 @@ public class Check_Web_Enabled_DEL {
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("showhide"))).click();
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@id='ContinueBtn']")))
 						.click();
-				System.out.println("This User" + "(" + username + ")" + " is able to click on Continue button on Home Page!!");
 
 				// Authorization Page Command
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#CancelBtn"))).click();
